@@ -15,8 +15,7 @@ rule limit-self-healing-iterations {
   AND input.iteration_count WORD "10"
   severity warning
   priority 90
-  ASK any
-  PROMPT "The agent has tried to fix the code 10 times. Should it continue?"
+  LOG any
 }
 
 rule warn-autonomous-pr {
